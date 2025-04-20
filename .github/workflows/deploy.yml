@@ -1,21 +1,14 @@
-name: Node.js CI
+name: Deploy WhatsApp Bot
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
-  build:
-
+  build-and-run:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [20.x]
 
     steps:
     - name: Checkout repository
@@ -24,10 +17,10 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '18'
 
     - name: Install dependencies
       run: npm install
 
-    - name: Start application
-      run: npm start
+    - name: Run bot (for test/debug only)
+      run: node index.js
