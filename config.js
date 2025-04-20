@@ -17,10 +17,10 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined ? './database.db' : 
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-  HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
+  HANDLERS: (process.env.PREFIX || '^[!]').trim(),
   BRANCH: "main",
   ADMIN_ACCESS: toBool(process.env.ADMIN_ACCESS) || false,
-  MODE: (process.env.MODE || 'private').toLowerCase(),
+  MODE: (process.env.MODE || 'public').toLowerCase(),
   ERROR_MSG: toBool(process.env.ERROR_MSG) || true,
   LOG_MSG: toBool(process.env.LOG_MSG) || true,
   READ_CMD: toBool(process.env.READ_CMD),
