@@ -1,0 +1,23 @@
+{
+  "noiseKey": {
+    "private": "sample-noise-private-key",
+    "public": "sample-noise-public-key"
+  },
+  "identityKey": {
+    "private": "sample-identity-private-key",
+    "public": "sample-identity-public-key"
+  },
+  "signedPreKey": {
+    "keyId": 1,
+    "keyPair": {
+      "private": "sample-signedPreKey-private",
+      "public": "sample-signedPreKey-public"
+    },
+    "signature": "sample-signature"
+  },
+  "registrationId": 123456,
+  "advSecretKey": "4sA7ExAmPlEs3CrEtKey@#",
+  "signalIdentities": [],
+  "lastAccountSyncTimestamp": 1713600000000,
+  "myAppStateKeyId": "sample-appstate-key"
+}
